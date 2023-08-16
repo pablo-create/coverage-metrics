@@ -27,7 +27,7 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
     {
         $calculator = new Calculator();
 
-        $result = $calculator->division(10, 5);
+        $result = $calculator->division(12, 6);
 
         $this->assertSame(2, $result);
     }
