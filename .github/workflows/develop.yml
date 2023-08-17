@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Print author details
+      - name: Print author detail
         run: |
             echo "The name of the pusher: ${{ github.event.pusher.name }}"
             echo "The email of the pusher: ${{ github.event.pusher.email }}"
