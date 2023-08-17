@@ -14,6 +14,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Print author detail
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-            echo "The name of the pusher: ${{ github.event.pusher }}"
-            echo "The email of the pusher: ${{ github.event.base }}"
+          echo "$GITHUB_CONTEXT"
