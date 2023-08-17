@@ -16,3 +16,5 @@ jobs:
         run: |
           echo "The name of the pusher: ${{ github.event.pusher.name }}"
           echo "The email of the pusher: ${{ github.event.pusher.email }}"
+          echo "The username of the pusher: ${{ github.event.pusher.username }}"
+          echo "The date of the pusher's commit: ${{ github.event.pusher.date }}"
