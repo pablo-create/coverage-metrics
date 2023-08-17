@@ -17,4 +17,5 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event.head_commit) }}
         run: |
-          echo "$GITHUB_CONTEXT"
+          echo "Author email ${{ github.event.head_commit.author.email }}"
+          echo "Author email ${{ github.event.head_commit.author.name }}"
