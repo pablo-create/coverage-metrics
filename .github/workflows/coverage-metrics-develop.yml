@@ -1,0 +1,19 @@
+name: Develop Coverage Metrics Features
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to repository
+        uses: actions/checkout@v3
+
+      - name: Print author details
+        run: |
+          echo "The name of the pusher: ${{ github.event.pusher.name }}"
+          echo "The email of the pusher: ${{ github.event.pusher.email }}"
+          echo "The username of the pusher: ${{ github.event.pusher.username }}"
+          echo "The date of the pusher's commit: ${{ github.event.pusher.date }}"
