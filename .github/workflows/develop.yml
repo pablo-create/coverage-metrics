@@ -15,6 +15,6 @@ jobs:
 
       - name: Print author detail
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github.event.head_commit) }}
         run: |
           echo "$GITHUB_CONTEXT"
