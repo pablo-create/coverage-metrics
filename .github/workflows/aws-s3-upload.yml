@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Checkout to repository
         uses: actions/checkout@v3
+
+      - name: Create file with committer details
+        run: |
+          echo AuthorEmail:${{ github.event.head_commit.author.email }}  > author.txt
+          echo AuthorName:${{ github.event.head_commit.author.name }} >> author.txt
         
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
