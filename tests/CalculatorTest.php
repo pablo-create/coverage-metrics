@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require_once 'src/Calculator.php';
+require_once '../src/Calculator.php';
 
 class CalculatorTest extends \PHPUnit\Framework\TestCase
 {
